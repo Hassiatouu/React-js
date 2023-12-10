@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body class="flex flex-col min-h-screen">
+
+   <header class="flex bg-bg-header space-x-14  items-center justify-around text-lg px-12 py-4  w-full fixed z-50 max-lg:" >
+
+    <div class="flex space-x-2">
+        <i class="fa-brands fa-react text-react pt-0.5 text-2xl"></i>
+        <h1 class=" text-react font-extrabold" >React</h1>
+    </div>
+
+    <div>
+        <ul class="flex text-slate-50 space-x-6">
+            <li><a href="#">Docs</a></li>
+            <li><a href="#">Tutoriel</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Communaute</a></li>       
+        </ul>
+
+    </div>
+
+    <div class="flex">
+       <div> <i class="fas fa-search text-slate-50" id="search-icon"></i>
+        <input class="bg-bg-header text-gray-700" type="text" id="search-input" placeholder="Recherche">
+       </div>
+
+        <ul class="flex  text-slate-50 space-x-6">
+            <li><a href="#">v18.2.0</a></li>
+            <li><a href="#">Langues</a></li>
+            <li><a href="#">Github</a></li>       
+        </ul>
+ 
+    </div>
+
+   </header>
+
+  <main class="grow flex flex-col items-center justify-center mt-14">
+
+    <div class="flex flex-col items-center justify-center space-y-6 bg-reacte w-full h-96" >
+        <h1 class="text-6xl font-bold text-react-light">React</h1>
+
+        <p class="text-2xl  text-slate-50" >Une bibliothèque JavaScript pour créer des interfaces utilisateurs</p>
+
+        <div class="flex space-x-5 pt-6 items-center ">
+            <button class="bg-react-light w-44 h-14 text-xl">Bien demarrer</button>
+
+            <a class=" text-xl text-react-light" href="#">Suivre le tutoriel</a>
+        </div>
+    </div>
+
+    <section class="flex w-4/5  h-80 space-x-6 mt-20">
+        <div class="text-lg w-full h-full">
+        <h3 class="text-2xl">Déclaratif</h3> 
+        <p class="pt-6">Grâce à React, il est facile de créer des interfaces utilisateurs interactives. Définissez des vues simples pour chaque état de votre application, et lorsque vos données changeront, React mettra à jour, de façon optimale, juste les composants qui en auront besoin.
+
+            Des vues déclaratives rendent votre code plus prévisible et plus facile à déboguer.</p>
+        </div>
+
+        <div class="text-lg w-full h-full">
+            <h3 class="text-2xl">À base de composants</h3>
+            <p class="pt-6">Créez des composants autonomes qui maintiennent leur propre état, puis assemblez-les pour créer des interfaces utilisateurs complexes.
+
+                Dans la mesure où les composants sont écrits en JavaScript plutôt que sous la forme de gabarits, vous pouvez facilement utiliser des données complexes dans vos applications et garder l’état hors du DOM.</p>
+
+        </div>
+
+        <div class="text-lg w-full h-full">
+            <h3 class="text-2xl">Utilisable partout</h3>
+            <p class="pt-6">Comme nous ne présumons rien sur les autres technologies que vous utilisez, vous pouvez développer de nouvelles fonctionnalités avec React sans avoir à réécrire votre code existant.
+
+                React peut aussi être utilisé côté serveur avec Node, ou pour créer des applications mobiles grâce à React Native.</p>
+
+        </div>
+    </section>
+
+    <section class="flex space-x-7 w-4/5 mt-24">
+
+        <div class="flex flex-col text-lg w-2/4 pt-11">
+            <h2 class="text-xl font-bold">Un composant simple</h2>
+            <p>Les composants React implémentent une méthode render() qui prend des données en entrée et retourne ce qui doit être affiché. Cet exemple utilise une syntaxe qui ressemble à du XML et qu’on appelle JSX. Les données passées au composant sont accessibles dans render() via this.props.</p>
+            <h3 class="text-lg font-bold pt-5">JSX n’est pas obligatoire pour utiliser React.</h3>
+            <p>Essayez la REPL Babel pour examiner le code JavaScript brut produit par la phase de compilation du format JSX. </p>
+        </div>
+        <div>
+            <img src="Capture d'écran 2023-12-09 202841.png" alt="">
+        </div>
+
+    </section>
+    <section  class="flex space-x-7 w-4/5 mt-24">
+        
+        <div class=" w-1/2 flex flex-col text-lg pt-6">
+            <h2 class="text-xl font-bold">Un composant à état</h2>
+            <p>En plus de pouvoir recevoir des données (accessibles via this.props), un composant peut maintenir un état local (accessible via this.state). Lorsque l’état local d’un composant change, son affichage est mis à jour en appelant render() une nouvelle fois</p>
+        </div>
+
+        <div class="flex space-x-0 w-full">
+            <div class="w-4/5 bg-reacte h-96  rounded-bl-lg rounded-tl-lg ">
+                <div class="flex items-center justify-between  bg-bg-header-light rounded-tl-lg px-3 h-11 text-slate-50">
+                    <h2>ÉDITEUR JSX INTERACTIF</h2>
+                    <h2>JSX</h2>
+                </div>
+
+                <div class="grow max-h-80 overflow-y-auto pl-4">
+                    <p class="text-slate-50">class Timer extends React.Component {<br>
+                        constructor(props) {<br>
+                            super(props);<br>
+                            this.state = { seconds: 0 };<br>
+                        }<br>
+                        
+                        tick() {<br>
+                            this.setState(state => ({<br>
+                            seconds: state.seconds + 1<br>
+                            }));<br>
+                        }<br>
+                        
+                        componentDidMount() {<br>
+                            this.interval = setInterval(() => this.tick(), 1000);<br>
+                        }<br>
+                        
+                        componentWillUnmount() {<br>
+                            clearInterval(this.interval);<br>
+                        }<br>
+                        
+                        render() {<br>
+                            return (<br>
+                            
+                                Secondes : {this.state.seconds}<br>
+                            
+                            );<br>
+                        }<br>
+                        }<br>
+                        
+                        rootrender(<Timerfg />);</p>
+
+                </div>
+            </div>
+
+            <div class="w-1/3 border h-96 rounded-tr-lg rounded-br-lg">
+
+                <div class="flex items-center bg-slate-400 rounded--lg px-3 h-11 text-black rounded-tr-lg ">
+                    <h2>RESULTAT</h2>
+                </div>
+
+                <div class=" pt-6 border-gray-400 ">
+                    <p class="mt-2">Secondes: 2345</p>
+                </div>
+
+
+            </div>
+        </div>
+
+       
+    </section>
+   </main>
+
+   <div class="flex items-center justify-center h-24 mt-16 space-x-5 bg-reacte-light  ">
+        <button class="bg-react-light w-44 h-14 text-xl">Bien demarrer</button>
+
+        <a class=" text-xl text-react-light" href="#">Suivre le tutoriel</a>
+   </div>
+
+   <footer class="flex  bg-bg-header-light h-screen text-slate-50 pt-16 pl-24">
+
+    <div>
+       <img class="w-2/3" src="Capture d'écran 2023-12-10 181338.png">
+    </div>
+
+    <div class="text-xl ">
+        <h2 class="text-stone-500 ">DOCS</h2>
+        <ul class="pt-5">
+            <li><a href="#">Installation</a></li>
+            <li><a href="#">Fondamentaux</a></li>
+            <li><a href="#">Guides avances</a></li>
+            <li><a href="#">Reference de l API</a></li>
+            <li><a href="#">Hooks</a></li>
+            <li><a href="#">Tests</a></li>
+            <li><a href="#">Contribuer</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+        <h2 class="text-stone-500  pt-5">COMMUNAUTE</h2>
+        <ul class="pt-5">
+            <li><a href="#">Role de conduite </a></li>
+            <li><a href="#">Ressources</a></li>
+        </ul>
+
+    </div>
+    <div class="text-xl ml-44">
+        <h2 class="text-stone-500 ">DOCS</h2>
+        <ul class="pt-5">
+            <li><a href="#">Installation</a></li>
+            <li><a href="#">Fondamentaux</a></li>
+            <li><a href="#">Guides avances</a></li>
+            <li><a href="#">Reference de l API</a></li>
+            <li><a href="#">Hooks</a></li>
+            <li><a href="#">Tests</a></li>
+            <li><a href="#">Contribuer</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+        <h2 class="text-stone-500  pt-5">COMMUNAUTE</h2>
+        <ul class="pt-5">
+            <li><a href="#">Role de conduite </a></li>
+            <li><a href="#">Ressources</a></li>
+        </ul>
+
+    </div>
+   </footer>
+  
+</body>
+</html>

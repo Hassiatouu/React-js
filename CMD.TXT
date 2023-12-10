@@ -1,0 +1,7 @@
+npx tailwindcss init
+npx tailwindcss -i .\src\input.css -o .\build\css\style.css // lancer apres avoir cree le input.css
+npm init -y // derniere config
+
+
+
+@une fois   npm i -D prettier-plugin-tailwindcsscls
